@@ -4,3 +4,6 @@
   tasks:
     - name: Print message
       shell: echo "Hello World, AWX is working"
+    - name: Print debug message
+      debug:
+        msg: Hello, world!
