@@ -3,7 +3,11 @@
 - hosts: localhost
   tasks:
     - name: Print message
-      shell: echo "Hello World, AWX is working"
+      shell: echo "Hello World, AWX is working, this is from shell commands!"
+      register: result
+    - name: Print result
+      debug:
+        var: result.stdout_lines
     - name: Print debug message
       debug:
-        msg: Hello, world!
+        msg: Hello, world!, this is from generic debug message!
